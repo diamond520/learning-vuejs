@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<style>
+	.active{
+		background-color: #AAA;
+
+	}
+	.errorClass{
+		color: red;
+	}
+</style>
+<body>
+	<div id="app" :class="[{ active: isActive }, errorClass]" :style="{ 'transform': transform, fontSize: fontSize + 'px' }">
+		teeett
+	</div>
+</body>
+</html>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+	data: {
+	  isActive: true,
+	  errorClass: 'text-danger',
+	  activeColor: 'red',
+  	  fontSize: 30,
+  	  transform: 'scale(.8,.8)'
+	}
+	// computed: {
+	//   classObject: function () {
+	//     return {
+	//       active: this.isActive && !this.error,
+	//       'text-danger': this.error && this.error.type === 'fatal',
+	//     }
+	//   }
+	// }
+  })
+</script>

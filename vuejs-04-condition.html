@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		teeest
+
+		<h1 v-if="show">Yes</h1>
+			<h1 v-if="show2">2d</h1>
+		<h1 v-else>No</h1>
+	</div>
+</body>
+</html>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+	data: {
+		show: false,
+		show2: true,
+	}
+  })
+</script>
